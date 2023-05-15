@@ -31,3 +31,8 @@ button {
     margin-bottom: 20px;
   
 }
+
+
+.list{
+  list-style: none;
+}
