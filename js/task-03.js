@@ -14,12 +14,10 @@ const images = [
 ];
 const galleryContainer = document.querySelector('.gallery');
 
-const imagesMarkup = images
-  .map(
+const imagesMarkup = images.map(
     image =>
       `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" class="gallery-img"></li>`
   )
-  .join('');
+  ;
 
-galleryContainer.insertAdjacentHTML('beforeend', imagesMarkup);
-galleryContainer.style.display('flex');
+galleryContainer.insertAdjacentHTML('beforeend', imagesMarkup.join(''));
