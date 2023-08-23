@@ -7,9 +7,7 @@ const setInitialFontSize =  () => {
         textElem.style.fontSize = fontSize;
     };
     
-    fontSizeControl.addEventListener('input', function () {
-        const fontSize = fontSizeControl.value + 'px';
-        textElem.style.fontSize = fontSize;
-    });
+    fontSizeControl.addEventListener('input', setInitialFontSize
+    );
     setInitialFontSize();
 });

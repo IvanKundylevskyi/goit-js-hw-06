@@ -7,10 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const formData = new FormData(loginForm);
     const formObject = {};
 
-    for (let [name, value] of formData.entries()) {
-      formObject[name] = value;
-    }
-
+    formData.forEach((value, name) => {
+  formObject[name] = value;
+});
     if (!formObject.email || !formObject.password) {
       alert("Please fill in all fields.");
     } else {

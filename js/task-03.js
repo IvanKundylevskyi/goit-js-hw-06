@@ -14,10 +14,14 @@ const images = [
 ];
 const galleryContainer = document.querySelector('.gallery');
 
+galleryContainer.style.display = 'flex';
+galleryContainer.style.flexDirection = 'column';
+galleryContainer.style.gap = '30px';
+galleryContainer.style.listStyleType = 'none';
+
 const imagesMarkup = images.map(
     image =>
-      `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" class="gallery-img"></li>`
+      `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}", width= '250px' class="gallery-img"></li>`
   )
   ;
-
 galleryContainer.insertAdjacentHTML('beforeend', imagesMarkup.join(''));
